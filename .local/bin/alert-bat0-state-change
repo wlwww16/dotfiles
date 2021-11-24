@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export DISPLAY=:0
+
+battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`
+charge_status=`cat /sys/class/power_supply/BAT0/status`
+
+if [ $battery_level -le 15 -a $charge_status == "Discharging" ]
+then
+	/usr/bin/notify-send -u critical "Battery level" "Battery level is $battery_level per cent"
+fi

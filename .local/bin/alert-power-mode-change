@@ -1,0 +1,18 @@
+#!/bin/bash
+
+f="/sys/devices/platform/asus-nb-wmi/throttle_thermal_policy"
+
+inotifywait -m -e modify "$f" --format "%e" | while read -r event; do
+	if [ "$event" == "MODIFY" ]; then
+        	content=$(<"$f")
+		speed=""
+		case $content in
+			0) speed="balanced" ;;
+			1) speed="performance" ;;
+			2) speed="silent" ;;
+		esac
+
+        	notify-send -t 2000 "Power mode" "Power mode set to $speed mode"
+    	fi
+done
+

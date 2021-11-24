@@ -1,0 +1,5 @@
+#!/bin/sh
+
+prompter=$(echo -e "$1" | dmenu -p "$2")
+
+echo $prompter

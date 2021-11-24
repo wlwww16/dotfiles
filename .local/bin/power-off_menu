@@ -1,0 +1,10 @@
+#!/bin/sh
+
+selected=$(dmenu_prompt "Shutdown\nRestart\nSleep\nLock\nCancel" "Select an option")
+
+case $selected in
+	Shutdown) sudo shutdown -h now ;;
+	Restart) sudo shutdown -r now ;;
+	Sleep) sudo zzz ;;
+	Lock) slock ;;
+esac

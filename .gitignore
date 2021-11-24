@@ -1,0 +1,44 @@
+# dirs
+.cache/
+.dbus/
+.dotnet/
+.node-gyp/
+.java/
+.nuget/
+.plastic4/
+.templateengine/
+.themes/
+.vscode-oss/
+RiderProjects/
+Documents/
+Downloads/
+
+# files
+.git-credentials
+.Xauthority
+.node_repl_history
+
+# config
+.config/
+!.config/dunst/
+!.config/fontconfig/
+!.config/gtk-3.0/
+!.config/htop/
+!.config/lf/
+!.config/mpv/
+!.config/networkmanager-dmenu/
+!.config/nvim/
+!.config/shell/
+!.config/sxiv/
+!.config/wget/
+!.config/x11/
+!.config/zsh/
+!.config/mimeapps.list
+
+# local
+.local/src/
+.local/lib/
+.local/include/
+.local/share/
+!.local/share/bg.png
+!.local/share/larbs/

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+f="/sys/class/leds/asus::kbd_backlight/brightness"
+current=$(<"$f")
+
+inotifywait -m -e modify "$f" --format "%e" | while read -r event; do
+	if [ "$event" == "MODIFY" ];
+	then
+        	previous="$current"
+		content=$(<"$f")
+		change=""
+
+		#if [ "$content" -gt "$previous" ]
+		#then
+			#change="increased"
+		#else
+			#change="decreased"
+		#fi
+
+		notify-send -t 1000 "Keyboard backlight" "Brightness $change ($content)"
+    	fi
+done
+
