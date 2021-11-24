@@ -19,20 +19,20 @@ Downloads/
 .node_repl_history
 
 # config
-.config/**
-!.config/dunst/**
-!.config/fontconfig/**
-!.config/gtk-3.0/**
-!.config/htop/**
-!.config/lf/**
-!.config/mpv/**
-!.config/networkmanager-dmenu/**
-!.config/nvim/**
-!.config/shell/**
-!.config/sxiv/**
-!.config/wget/**
-!.config/x11/**
-!.config/zsh/*
+.config/
+!.config/dunst/
+!.config/fontconfig/
+!.config/gtk-3.0/
+!.config/htop/
+!.config/lf/
+!.config/mpv/
+!.config/networkmanager-dmenu/
+!.config/nvim/
+!.config/shell/
+!.config/sxiv/
+!.config/wget/
+!.config/x11/
+!.config/zsh/
 !.config/mimeapps.list
 
 # local
