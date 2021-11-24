@@ -1,0 +1,4 @@
+
+[Default Applications]
+x-scheme-handler/mailto=brave-browser.desktop
+inode/directory=pcmanfm.desktop
