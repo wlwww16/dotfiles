@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# This file runs when you startx
+
+setbg &				# set background in setbg script (on path)
+xset r rate 200 50 &		# speed up repeated key delay
+xcompmgr &			# required for transparency in st-alpha
+slstatus &			# status bar
+unclutter &			# hide cursor on idle
+alert-power-mode-change &	# monitor power mode
+alert-kbd-light-change &	# monitor backlight level
+
+# Pulse/Chromium-based browser bug fix
+pidof -s runit &&
+	! pidof -s pulseaudio >/dev/null 2>&1 &&
+	setsid -f pulseaudio --start --exit-idle-time=-1 >/dev/null 2>&1
+
+light -S 100 # set backlight to 100%
+light -Srs "sysfs/leds/asus::kbd_backlight" 3 # set keyboard backlight to 100%

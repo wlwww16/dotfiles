@@ -1,0 +1,27 @@
+#!/bin/sh
+
+alias vim="nvim" # use neovim over vim
+alias startx="startx $XINITRC" # startx with set xinitrc file
+
+# remove the need for sudo on certain commands
+for command in mount umount sv pacman shutdown zzz ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Verbosity and common switches
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt x -f bestaudio/best" \
+
+# Colourise commands
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+
+# Abbreviations
+alias shutdownnow="sudo shutdown -h now"

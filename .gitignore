@@ -19,7 +19,7 @@ Downloads/
 .node_repl_history
 
 # config
-.config/
+.config/*
 !.config/dunst/
 !.config/fontconfig/
 !.config/gtk-3.0/
@@ -39,6 +39,6 @@ Downloads/
 .local/src/
 .local/lib/
 .local/include/
-.local/share/
+.local/share/*
 !.local/share/bg.png
 !.local/share/larbs/
