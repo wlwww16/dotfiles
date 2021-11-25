@@ -5,6 +5,7 @@
 .node-gyp/
 .java/
 .nuget/
+.pki/
 .plastic4/
 .templateengine/
 .themes/
