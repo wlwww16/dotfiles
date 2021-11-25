@@ -2,13 +2,12 @@
 
 # This file runs when you startx
 
-setbg &				# set background in setbg script (on path)
+set_bg &			# set background in set_bg script (on path)
 xset r rate 200 50 &		# speed up repeated key delay
-xcompmgr &			# required for transparency in st-alpha
+xcompmgr &			# required for transparency
 slstatus &			# status bar
 unclutter &			# hide cursor on idle
-alert-power-mode-change &	# monitor power mode
-alert-kbd-light-change &	# monitor backlight level
+alert_power_mode_change &	# monitor power mode
 
 # Pulse/Chromium-based browser bug fix
 pidof -s runit &&
