@@ -1,0 +1,11 @@
+#!/bin/sh
+
+volume_perc=$(pulsemixer --get-volume | awk -F" " '{print $1 }')
+is_muted=$(pulsemixer --get-mute)
+
+if [ $volume_perc = 0 ] || [ $is_muted = 1 ]
+then
+	echo 0
+else
+	echo $volume_perc
+fi
