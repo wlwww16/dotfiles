@@ -1,0 +1,71 @@
+#!/bin/sh
+
+Help()
+{
+	echo -e "usage:\tget_system_info {function} [args]"
+	echo -e "functions:"
+	echo -e "\tget_system_info {-h}\t\tView this help page"
+	echo -e "\tget_system_info {-v}\t\tGet volume percentage"
+	echo -e "\tget_system_info {-b}\t\tGet BAT0 level"
+}
+
+Volume()
+{
+	volume_perc=$(pulsemixer --get-volume | awk -F" " '{print $1}')
+	is_muted=$(pulsemixer --get-mute)
+
+	if [ $volume_perc = 0 ] || [ $is_muted = 1 ]
+	then
+		echo  0
+	else
+		echo  $volume_perc
+	fi
+}
+
+Battery()
+{
+	battery_perc=$(cat /sys/class/power_supply/BAT0/capacity)
+	battery_state=$(cat /sys/class/power_supply/BAT0/status)
+
+	if [ $battery_state = "Discharging" ]
+	then
+		if ((75<=$battery_perc))
+		then
+			echo  $battery_perc
+		elif ((50<=$battery_perc  && $battery_perc<=74))
+		then
+			echo  $battery_perc
+		elif ((25<=$battery_perc && $battery_perc<=49))
+		then
+			echo  $battery_perc
+		elif ((10<=$battery_perc && $battery_perc<=24))
+		then
+			echo  $battery_perc
+		else
+			echo  $battery_perc
+		fi
+	else
+		echo  $battery_perc
+	fi
+
+}
+
+while getopts ":hbv" option; do
+	case $option in
+		h)
+			Help
+			exit;;
+		
+		v)
+			Volume
+			exit;;
+		
+		b)
+			Battery
+			exit;;
+
+		?)
+			Help
+			exit;;
+	esac
+done
