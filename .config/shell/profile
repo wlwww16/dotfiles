@@ -5,9 +5,6 @@
 # Add ~/.local/bin to $PATH
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
-# Remove percentage sign from prompt
-unsetopt PROMPT_SP
-
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="st"
