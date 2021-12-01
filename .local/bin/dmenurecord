@@ -9,17 +9,14 @@
 #
 # If there is already a running instance, user will be prompted to end it.
 
-updateicon() { \
-	echo "$1" > /tmp/recordingicon
-	pkill -RTMIN+9 "${STATUSBAR:-dwmblocks}"
-	}
+# Modified to use notify-send instead of dwmblocks icons
 
 killrecording() {
 	recpid="$(cat /tmp/recordingpid)"
 	# kill with SIGTERM, allowing finishing touches.
 	kill -15 "$recpid"
 	rm -f /tmp/recordingpid
-	updateicon ""
+	notify-send "dmenurecord" "Recording stopped"
 	pkill -RTMIN+9 "${STATUSBAR:-dwmblocks}"
 	# even after SIGTERM, ffmpeg may still run, so SIGKILL it.
 	sleep 3
@@ -38,7 +35,7 @@ screencast() { \
  	-c:v h264 -crf 0 -preset ultrafast -c:a aac \
 	"$HOME/screencast-$(date '+%y%m%d-%H%M-%S').mp4" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️🎙️"
+	notify-send -t 1000 "dmenurecord" "Screencast started"
        	}
 
 video() { ffmpeg \
@@ -48,7 +45,7 @@ video() { ffmpeg \
  	-c:v libx264 -qp 0 -r 30 \
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️"
+	notify-send -t 1000 "dmenurecord" "Video recording started"
 	}
 
 webcamhidef() { ffmpeg \
@@ -57,7 +54,7 @@ webcamhidef() { ffmpeg \
 	-video_size 1920x1080 \
 	"$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "🎥"
+	notify-send -t 1000 "dmenurecord" "HD webcam recording started"
 	}
 
 webcam() { ffmpeg \
@@ -66,9 +63,8 @@ webcam() { ffmpeg \
 	-video_size 640x480 \
 	"$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "🎥"
+	notify-send -t 1000 "dmenurecord" "Webcam recording started"
 	}
-
 
 audio() { \
 	ffmpeg \
@@ -76,7 +72,7 @@ audio() { \
 	-c:a flac \
 	"$HOME/audio-$(date '+%y%m%d-%H%M-%S').flac" &
 	echo $! > /tmp/recordingpid
-	updateicon "🎙️"
+	notify-send -t 1000 "dmenurecord" "Audio recording started"
 	}
 
 askrecording() { \
@@ -87,7 +83,7 @@ askrecording() { \
 		video) video;;
 		*selected) videoselected;;
 		webcam) webcam;;
-		"webcam (hi-def)") webcamhidef;;
+		webcam-hd) webcamhidef;;
 	esac
 	}
 
@@ -110,7 +106,7 @@ videoselected()
 	-c:v libx264 -qp 0 -r 30 \
 	"$HOME/box-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
-	updateicon "⏺️"
+	notify-send -t 1000 "dmenurecord" "Recording started"
 }
 
 case "$1" in
