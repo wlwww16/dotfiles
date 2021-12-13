@@ -43,3 +43,9 @@ Downloads/
 .local/share/*
 !.local/share/bg.png
 !.local/share/larbs/
+
+# gpg
+.#lk0x000055be572755d0.ArtBox.7413
+.#lk0x00005618c06cf5d0.ArtBox.7149
+pubring.kbx
+.gnupg/
