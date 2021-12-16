@@ -5,8 +5,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-highlightedyank'
-Plug 'dracula/vim'
 Plug 'ap/vim-css-color'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -17,4 +17,4 @@ set mouse=a
 set guicursor=
 set relativenumber
 
-colorscheme dracula
+colorscheme gruvbox
