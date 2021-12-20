@@ -34,7 +34,7 @@ Downloads/
 !.config/sxiv/
 !.config/wget/
 !.config/x11/
-!.config/zsh/
+!.config/zsh/.zshrc
 !.config/mimeapps.list
 
 # local
