@@ -47,7 +47,6 @@ Battery()
 	else
 		echo  $battery_perc
 	fi
-
 }
 
 while getopts ":hbv" option; do
