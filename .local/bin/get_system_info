@@ -27,7 +27,7 @@ Battery()
 	battery_perc=$(cat /sys/class/power_supply/BAT0/capacity)
 	battery_state=$(cat /sys/class/power_supply/BAT0/status)
 
-	if [ $battery_state = "Discharging" ]
+	if [ "$battery_state" = "Discharging" ]
 	then
 		if ((75<=$battery_perc))
 		then
