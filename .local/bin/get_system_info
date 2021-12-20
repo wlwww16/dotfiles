@@ -6,7 +6,7 @@ Help()
 	echo -e "functions:"
 	echo -e "\tget_system_info {-h}\t\tView this help page"
 	echo -e "\tget_system_info {-v}\t\tGet volume percentage"
-	echo -e "\tget_system_info {-b}\t\tGet BAT0 level"
+	echo -e "\tget_system_info {-b}\t\tGet BAT0 charge level"
 }
 
 Volume()
@@ -45,7 +45,7 @@ Battery()
 			echo  $battery_perc
 		fi
 	else
-		echo  $battery_perc
+		echo  $battery_perc
 	fi
 }
 
