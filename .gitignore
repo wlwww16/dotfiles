@@ -2,10 +2,7 @@
 .cache/
 .dbus/
 .dotnet/
-.java/
 .librewolf/
-.node-gyp/
-.nuget/
 .pki/
 .plastic4/
 .templateengine/
@@ -23,7 +20,7 @@ videos/
 .node_repl_history
 .Xauthority
 
-# config dirs
+# config
 .config/*
 !.config/dunst/
 !.config/fontconfig/
@@ -32,7 +29,10 @@ videos/
 !.config/lf/
 !.config/mpv/
 !.config/networkmanager-dmenu/
+!.config/neofetch/
+!.config/npm/
 !.config/nvim/
+!.config/pcmanfm/
 !.config/shell/
 !.config/sxiv/
 !.config/wget/
