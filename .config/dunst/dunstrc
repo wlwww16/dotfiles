@@ -5,12 +5,26 @@
 	padding = 2
 	horizontal_padding = 2
 	frame_width = 2
-	frame_color = "#282828"
 	font = Hack 12
 	transparency = 10
-	format = "<b><span foreground='#7aeb97'>%s</span></b>\n%b"
+
+[urgency_low]
+	background = "#282828"
+	foreground = "#8ec07c"
+	timeout = 2
+	format = "<b><span foreground='#689d6a'>%s</span></b>\n%b"
+	frame_color = "#689d6a"
 
 [urgency_normal]
 	background = "#282828"
-	foreground = "#fce1bd"
-	timeout = 3
+	foreground = "#83a598"
+	timeout = 4
+	format = "<b><span foreground='#458588'>%s</span></b>\n%b"
+	frame_color = "#458588"
+
+[urgency_critical]
+	background = "#282828"
+	foreground = "#fb4934"
+	timeout = 8
+	format = "<b><span foreground='#cc241d'>%s</span></b>\n%b"
+	frame_color = "#cc241d"
