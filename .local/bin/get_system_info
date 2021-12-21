@@ -30,6 +30,13 @@ Volume()
 	fi
 }
 
+Brightness()
+{
+	brightness_perc=$(light | awk -F'.' '{print $1}')
+
+	ColouriseAndReset  $brightness_perc 
+}
+
 Battery()
 {
 	battery_perc=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -57,7 +64,7 @@ Battery()
 	fi
 }
 
-while getopts ":hbv" option; do
+while getopts ":hbvB" option; do
 	case $option in
 		h)
 			Help
@@ -69,6 +76,10 @@ while getopts ":hbv" option; do
 		
 		b)
 			Battery
+			exit;;
+
+		B)
+			Brightness
 			exit;;
 
 		?)
