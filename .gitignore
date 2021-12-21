@@ -1,26 +1,29 @@
-# dirs
+# dot dirs
 .cache/
 .dbus/
 .dotnet/
-.node-gyp/
 .java/
+.librewolf/
+.node-gyp/
 .nuget/
 .pki/
 .plastic4/
 .templateengine/
-.themes/
 .vscode-oss/
-.librewolf/
-RiderProjects/
-Documents/
-Downloads/
 
-# files
+# personal dirs
+documents/
+downloads/
+music/
+pictures/
+videos/
+
+# dot files
 .git-credentials
-.Xauthority
 .node_repl_history
+.Xauthority
 
-# config
+# config dirs
 .config/*
 !.config/dunst/
 !.config/fontconfig/
@@ -36,6 +39,8 @@ Downloads/
 !.config/x11/
 !.config/zsh/.zshrc
 !.config/mimeapps.list
+!.config/user-dirs.dirs
+!.config/user-dirs.locale
 
 # local
 .local/src/
