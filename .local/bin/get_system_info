@@ -1,5 +1,13 @@
 #!/bin/sh
 
+ColouriseAndReset()
+{
+	fg_colour_code="^c#458588^"
+	fg_reset_code="^d^"
+
+	echo "$fg_colour_code$1$fg_reset_code $2"
+}
+
 Help()
 {
 	echo -e "usage:\tget_system_info {function} [args]"
@@ -16,9 +24,9 @@ Volume()
 
 	if [ $volume_perc = 0 ] || [ $is_muted = 1 ]
 	then
-		echo  0
+		ColouriseAndReset  0
 	else
-		echo  $volume_perc
+		ColouriseAndReset  $volume_perc
 	fi
 }
 
@@ -31,21 +39,21 @@ Battery()
 	then
 		if ((75<=$battery_perc))
 		then
-			echo  $battery_perc
+			ColouriseAndReset  $battery_perc
 		elif ((50<=$battery_perc  && $battery_perc<=74))
 		then
-			echo  $battery_perc
+			ColouriseAndReset  $battery_perc
 		elif ((25<=$battery_perc && $battery_perc<=49))
 		then
-			echo  $battery_perc
+			ColouriseAndReset  $battery_perc
 		elif ((10<=$battery_perc && $battery_perc<=24))
 		then
-			echo  $battery_perc
+			ColouriseAndReset  $battery_perc
 		else
-			echo  $battery_perc
+			ColouriseAndReset  $battery_perc
 		fi
 	else
-		echo  $battery_perc
+		ColouriseAndReset  $battery_perc
 	fi
 }
 
