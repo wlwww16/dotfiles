@@ -1,9 +1,7 @@
 #!/bin/sh
+# Alias file. This defines the aliases to be used by the shell.
 
-alias vim="nvim" # use neovim over vim
-alias startx="startx $XINITRC" # startx with set xinitrc file
-
-# remove the need for sudo on certain commands
+# Remove the need for sudo on certain commands
 for command in mount umount sv pacman shutdown zzz ; do
 	alias $command="sudo $command"
 done; unset command
@@ -24,4 +22,11 @@ alias \
 	diff="diff --color=auto" \
 
 # Abbreviations
-alias shutdownnow="sudo shutdown -h now"
+alias \
+	la="ls -a" \
+	ll="ls -alF" \
+	ga="git add" \
+	gs="git status" \
+	vim="nvim" \
+	startx="startx $XINITRC" \
+
