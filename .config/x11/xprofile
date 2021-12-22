@@ -4,7 +4,7 @@
 # Run programs
 set_bg &			# set background in set_bg script (on path)
 xset r rate 200 50 &		# speed up repeated key delay
-xcompmgr &			# compositor for transparency
+picom &				# compositor for transparency
 slstatus &			# status bar
 unclutter &			# hide cursor while idle
 alert_power_mode_change &	# monitor power mode

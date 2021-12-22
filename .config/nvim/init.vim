@@ -9,7 +9,6 @@ Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'rrethy/vim-illuminate'
-Plug 'joeytwiddle/sexy_scroller.vim'
 
 call plug#end()
 
