@@ -1,5 +1,5 @@
 [Default Applications]
-x-scheme-handler/mailto=brave-browser.desktop
+x-scheme-handler/mailto=librewolf.desktop
 inode/directory=pcmanfm.desktop
 x-scheme-handler/http=librewolf.desktop
 x-scheme-handler/https=librewolf.desktop
@@ -11,6 +11,7 @@ application/x-extension-shtml=librewolf.desktop
 application/xhtml+xml=librewolf.desktop
 application/x-extension-xhtml=librewolf.desktop
 application/x-extension-xht=librewolf.desktop
+image/png=nsxiv.desktop
 
 [Added Associations]
 x-scheme-handler/http=librewolf.desktop;
@@ -23,3 +24,4 @@ application/x-extension-shtml=librewolf.desktop;
 application/xhtml+xml=librewolf.desktop;
 application/x-extension-xhtml=librewolf.desktop;
 application/x-extension-xht=librewolf.desktop;
+image/png=nsxiv.desktop;
