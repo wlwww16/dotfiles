@@ -14,6 +14,7 @@ downloads/
 music/
 pictures/
 videos/
+vimwiki/
 
 # dot files
 .git-credentials
