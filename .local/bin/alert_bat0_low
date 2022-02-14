@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export DISPLAY=:0
-
 battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`
 charge_status=`cat /sys/class/power_supply/BAT0/status`
 
