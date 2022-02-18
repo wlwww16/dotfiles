@@ -44,6 +44,9 @@ vimwiki/
 !.config/mimeapps.list
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
+!.config/polybar/
+!.config/bspwm/
+!.config/sxhkd/
 
 # local
 .local/src/

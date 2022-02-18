@@ -1,0 +1,31 @@
+#! /bin/sh
+
+# autostart
+xsetroot -cursor_name left_ptr
+pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x polybar > /dev/null || polybar default &
+
+# config
+bspc monitor -d 1 2 3 4 5 6 7 8 9
+
+bspc config border_width         4
+bspc config window_gap          12
+bspc config focus_follows_pointer true
+
+bspc config split_ratio          0.55
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config normal_border_color "#282828"
+bspc config focused_border_color "#458588"
+bspc config urgent_border_color "#689d6a"
+
+# window rules
+bspc rule -a Pcmanfm desktop='^2'
+bspc rule -a LibreWolf desktop='^3'
+bspc rule -a jetbrains-rider desktop='^4'
+bspc rule -a Gimp desktop='^5'
+bspc rule -a TelegramDesktop desktop='^7'
+bspc rule -a Libreoffice-writer desktop='^8'
+bspc rule -a Brave-browser-beta desktop='^9'
+bspc rule -a Pavucontrol state=floating
