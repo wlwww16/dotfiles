@@ -1,8 +1,9 @@
 # zshrc - sourced on every shell open
 
-# pfetch
+# autostart
 echo
 pfetch
+#colors
 
 # enable colours and change prompt
 autoload -U colors && colors
