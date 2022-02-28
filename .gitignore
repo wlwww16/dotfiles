@@ -47,6 +47,7 @@ vimwiki/
 !.config/polybar/
 !.config/bspwm/
 !.config/sxhkd/
+!.config/picom/
 
 # local
 .local/src/
