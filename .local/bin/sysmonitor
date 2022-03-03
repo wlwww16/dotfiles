@@ -1,3 +1,0 @@
-#!/bin/bash
-
-echo %{r}right aligned text! %{F#458588}blue!
