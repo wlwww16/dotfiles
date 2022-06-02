@@ -13,6 +13,7 @@ application/x-extension-xhtml=librewolf.desktop
 application/x-extension-xht=librewolf.desktop
 image/png=nsxiv.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop
+image/jpeg=nsxiv.desktop
 
 [Added Associations]
 x-scheme-handler/http=librewolf.desktop;
@@ -27,3 +28,4 @@ application/x-extension-xhtml=librewolf.desktop;
 application/x-extension-xht=librewolf.desktop;
 image/png=nsxiv.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop;
+image/jpeg=nsxiv.desktop;

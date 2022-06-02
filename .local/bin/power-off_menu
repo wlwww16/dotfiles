@@ -1,6 +1,6 @@
 #!/bin/sh
 
-selected=$(dprompt "Shutdown\nRestart\nSleep\nLock\nCancel" "Select an option")
+selected=$(/home/will/.local/bin/dprompt "Shutdown\nRestart\nSleep\nLock\nCancel" "Select an option")
 
 case $selected in
 	Shutdown) sudo shutdown -h now ;;

@@ -6,5 +6,5 @@ else
 	. "$HOME/.xprofile"
 fi
 
-# ssh-agent dwm
+#exec dwm
 exec bspwm

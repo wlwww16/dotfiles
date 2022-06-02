@@ -3,7 +3,7 @@
 # a selected area, the current window, or the whole screen, either to disk or to
 # the clipboard.
 
-selected=$(dprompt "Selected area\nCurrent window\nFullscreen\nSelected area (copy)\nCurrent window (copy)\nFullscreen (copy)" "Select an option") # take dmenu input
+selected=$(dprompt "Selected area\nCurrent window\nFullscreen\nSelected area (copy)\nCurrent window (copy)\nFullscreen (copy)\nFullscreen (timer, copy)" "Select an option") # take dmenu input
 shotsdir=$(xdg-user-dir PICTURES)/screenshots # get the user's picture directory and go into a "screenshots" folder
 timestamp=$(date '+%Y%m%d-%H%M%S') # generate the picture timestamp
 
@@ -16,4 +16,5 @@ case $selected in
 	"Selected area (copy)") maim -s | xclip -selection clipboard -t image/png ;;
 	"Current window (copy)") maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
 	"Fullscreen (copy)") maim | xclip -selection clipboard -t image/png ;;
+	"Fullscreen (timer, copy)") sleep 3 && maim | xclip -selection clipboard -t image/png ;;
 esac

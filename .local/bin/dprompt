@@ -1,5 +1,5 @@
 #!/bin/sh
 
-prompter=$(echo -e "$1" | dmenu -p "$2" -c -l 20)
+prompter=$(echo -e "$1" | /usr/local/bin/dmenu -p "$2" -c -l 20)
 
 echo $prompter

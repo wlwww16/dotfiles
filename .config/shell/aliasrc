@@ -29,4 +29,5 @@ alias \
 	gs="git status" \
 	vim="nvim" \
 	startx="startx $XINITRC" \
+	ns="nsxiv" \
 

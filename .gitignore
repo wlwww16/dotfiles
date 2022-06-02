@@ -9,6 +9,8 @@
 .vscode-oss/
 .java/
 .nuget/
+.wine/
+.WineApps/
 
 # personal dirs
 documents/
@@ -37,7 +39,7 @@ vimwiki/
 !.config/nvim/
 !.config/pcmanfm/
 !.config/shell/
-!.config/sxiv/
+!.config/nsxiv/
 !.config/wget/
 !.config/x11/
 !.config/zsh/.zshrc
