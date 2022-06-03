@@ -27,6 +27,9 @@ alias \
 	ll="ls -alF" \
 	ga="git add" \
 	gs="git status" \
+	gd="git diff" \
+	gcm="git commit -m" \
+	gpom="git push origin master" \
 	vim="nvim" \
 	startx="startx $XINITRC" \
 	ns="nsxiv" \
