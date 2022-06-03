@@ -25,9 +25,6 @@ super + p
 super + e
 	pcmanfm
 
-super + shift + e
-	telegram-desktop
-
 super + n
 	networkmanager_dmenu
 
