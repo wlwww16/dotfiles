@@ -29,3 +29,4 @@ bspc rule -a Gimp-2.99 desktop='^5'
 bspc rule -a Libreoffice-writer desktop='^8'
 bspc rule -a Brave-browser-beta desktop='^9'
 bspc rule -a Pavucontrol state=floating
+bspc rule -a scratchpad state=floating

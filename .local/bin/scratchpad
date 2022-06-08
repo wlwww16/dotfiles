@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# check if program with scratchpad class exists
+EXISTS=(`xdotool search --class "scratchpad"`)
+
+# check if a window by the name st.scratchpad is managed (open)
+MANAGED=(`wmctrl -lx | grep st.scratchpad`)
+
+alternate_pad() {
+	# if the window is not managed
+	if [ "$MANAGED" == "" ]; then
+		# manage it
+		xdotool search --class "scratchpad" windowmap
+	else
+		# unmanage it
+		xdotool search --class "scratchpad" windowunmap
+	fi
+}
+
+# if the program does not exist
+if [ "$EXISTS" == "" ]; then
+	# launch it
+	st -T st-scratchpad -c scratchpad -g 110x40
+else
+	# alternate its state
+	$(alternate_pad)
+fi

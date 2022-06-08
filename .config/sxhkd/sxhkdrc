@@ -10,6 +10,9 @@
 super + Return
 	st
 
+super + shift + Return
+	scratchpad
+
 super + d
 	dmenu_run -l 20 -c -m 0 -fn "Hack:size=12" -nb "#282828" -nf "#ebdbb2" -sb "#458588" -sf "#282828"
 

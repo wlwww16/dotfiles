@@ -1,33 +1,33 @@
 [Default Applications]
-x-scheme-handler/mailto=librewolf.desktop
-inode/directory=pcmanfm.desktop
-x-scheme-handler/http=librewolf.desktop
-x-scheme-handler/https=librewolf.desktop
-x-scheme-handler/chrome=librewolf.desktop
-text/html=librewolf.desktop
-application/x-extension-htm=librewolf.desktop
-application/x-extension-html=librewolf.desktop
-application/x-extension-shtml=librewolf.desktop
-application/xhtml+xml=librewolf.desktop
-application/x-extension-xhtml=librewolf.desktop
-application/x-extension-xht=librewolf.desktop
-image/png=nsxiv.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop
-image/jpeg=nsxiv.desktop
-text/markdown=nvim.desktop
-
-[Added Associations]
-x-scheme-handler/http=librewolf.desktop;
-x-scheme-handler/https=librewolf.desktop;
-x-scheme-handler/chrome=librewolf.desktop;
-text/html=librewolf.desktop;
 application/x-extension-htm=librewolf.desktop;
 application/x-extension-html=librewolf.desktop;
 application/x-extension-shtml=librewolf.desktop;
-application/xhtml+xml=librewolf.desktop;
-application/x-extension-xhtml=librewolf.desktop;
 application/x-extension-xht=librewolf.desktop;
-image/png=nsxiv.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop;
+application/x-extension-xhtml=librewolf.desktop;
+application/xhtml+xml=librewolf.desktop;
 image/jpeg=nsxiv.desktop;
+image/png=nsxiv.desktop;
+inode/directory=pcmanfm.desktop;
+text/html=librewolf.desktop;
 text/markdown=nvim.desktop;
+x-scheme-handler/chrome=librewolf.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
+x-scheme-handler/mailto=librewolf.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop;
+[Added Associations]
+application/x-extension-htm=librewolf.desktop;
+application/x-extension-html=librewolf.desktop;
+application/x-extension-shtml=librewolf.desktop;
+application/x-extension-xht=librewolf.desktop;
+application/x-extension-xhtml=librewolf.desktop;
+application/xhtml+xml=librewolf.desktop;
+image/jpeg=nsxiv.desktop;
+image/png=nsxiv.desktop;
+text/html=librewolf.desktop;
+text/markdown=nvim.desktop;
+x-scheme-handler/chrome=librewolf.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-HRP7E1.desktop;
+
