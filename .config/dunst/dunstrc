@@ -1,7 +1,7 @@
 [global]
 	width = 370
 	height = 350
-	offset = 0x20
+	offset = 20x50
 	padding = 4
 	horizontal_padding = 2
 	frame_width = 2
