@@ -10,6 +10,8 @@ unclutter &			# hide cursor while idle
 alert_power_mode_change &	# monitor power mode
 redshift-gtk &			# screen colour temperature
 dunst &				# notification server
+nm-applet &			# network manager
+pasystray &			# volume icon
 
 # Pulse/Chromium-based browser bug fix
 pidof -s runit &&
