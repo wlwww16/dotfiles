@@ -7,4 +7,4 @@ else
 fi
 
 #exec dwm
-exec bspwm
+exec dbus-launch bspwm

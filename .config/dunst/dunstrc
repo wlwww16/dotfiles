@@ -1,8 +1,8 @@
 [global]
 	width = 370
 	height = 350
-	offset = 0xA
-	padding = 2
+	offset = 0x20
+	padding = 4
 	horizontal_padding = 2
 	frame_width = 2
 	font = Hack 12

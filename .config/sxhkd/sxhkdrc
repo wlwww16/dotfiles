@@ -78,13 +78,17 @@ XF86ScreenSaver
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Configuration reloaded'
 
 # bspwm hotkeys
 
-# quit/restart bspwm
-super + shift + ctrl + {q,r}
-	bspc {quit,wm -r}
+# restart bspwm
+super + shift + ctrl + r
+	bspc wm -r; notify-send 'bspwm' 'Configuration reloaded'
+
+# quit bspwm
+super + shift + control + q
+	bspc quit
 
 # close and kill
 super + {_,shift + }q
@@ -134,9 +138,13 @@ super + {_,shift + }c
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# focus the last desktop
+super + Tab
+	bspc desktop -f last
+
+# cycle between desktops
+super + {shift + grave, grave}
+	bspc desktop -f {prev,next}.occupied
 
 # focus the older or newer node in the focus history
 super + {o,i}

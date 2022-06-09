@@ -5,10 +5,11 @@
 set_bg &			# set background in set_bg script (on path)
 xset r rate 200 50 &		# speed up repeated key delay
 picom &				# compositor for transparency
-slstatus &			# status bar
+# slstatus &			# status bar
 unclutter &			# hide cursor while idle
 alert_power_mode_change &	# monitor power mode
 redshift-gtk &			# screen colour temperature
+dunst &				# notification server
 
 # Pulse/Chromium-based browser bug fix
 pidof -s runit &&
