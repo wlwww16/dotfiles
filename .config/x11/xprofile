@@ -12,6 +12,7 @@ redshift-gtk &			# screen colour temperature
 dunst &				# notification server
 nm-applet &			# network manager
 pasystray &			# volume icon
+xfce4-power-manager --daemon &	# power manager
 
 # Pulse/Chromium-based browser bug fix
 pidof -s runit &&
