@@ -13,11 +13,12 @@ dunst &				# notification server
 nm-applet &			# network manager
 pasystray &			# volume icon
 xfce4-power-manager --daemon &	# power manager
+pipewire &			# audio server
 
 # Pulse/Chromium-based browser bug fix
-pidof -s runit &&
-	! pidof -s pulseaudio >/dev/null 2>&1 &&
-	setsid -f pulseaudio --start --exit-idle-time=-1 >/dev/null 2>&1
+#pidof -s runit &&
+#	! pidof -s pulseaudio >/dev/null 2>&1 &&
+#	setsid -f pulseaudio --start --exit-idle-time=-1 >/dev/null 2>&1
 
 # Backlight
 light -S 100 # set monitor backlight to 100%

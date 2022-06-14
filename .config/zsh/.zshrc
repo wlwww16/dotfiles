@@ -1,8 +1,8 @@
 # zshrc - sourced on every shell open
 
 # autostart
-echo
-pfetch
+#echo
+#pfetch
 #colors
 
 # enable colours and change prompt
