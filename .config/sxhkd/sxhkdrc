@@ -14,7 +14,7 @@ super + shift + Return
 	scratchpad
 
 super + d
-	dmenu_run -l 20 -c -m 0 -fn "Hack:size=12" -nb "#282828" -nf "#ebdbb2" -sb "#458588" -sf "#282828"
+	dmenu_run -p ">" -l 20 -c -m 0 -fn "Hack:size=14" -nb "#272822" -nf "#f8f8f2" -sb "#272822" -sf "#66d9ef"
 
 super + w
 	librewolf
