@@ -1,65 +1,36 @@
-# dot dirs
-.cache/
-.dbus/
-.dotnet/
-.librewolf/
-.mpd/
-.ncmpcpp/
-.pki/
-.plastic4/
-.templateengine/
-.vscode-oss/
-.java/
-.nuget/
-.wine/
-.WineApps/
+# ignore everything
+*
 
-# personal dirs
-documents/
-downloads/
-music/
-pictures/
-videos/
-vimwiki/
-go/
+# ~
+!.xprofile
+!.zprofile
+!.gitignore
+!LICENSE
+!README.md
 
-# dot files
-.git-credentials
-.node_repl_history
-.Xauthority
-.gtk-bookmarks
-
-# config
-.config/*
+# ~/.config/
+!.config/bspwm/
 !.config/dunst/
 !.config/fontconfig/
 !.config/gtk-3.0/settings.ini
 !.config/htop/
 !.config/lf/
-!.config/mpv/
 !.config/networkmanager-dmenu/
-!.config/neofetch/
 !.config/npm/
-!.config/nvim/
-!.config/pcmanfm/
-!.config/shell/
 !.config/nsxiv/
+!.config/nvim/
+!.config/picom/
+!.config/polybar/
+!.config/shell/
+!.config/sxhkd/
 !.config/wget/
 !.config/x11/
 !.config/zsh/.zshrc
 !.config/mimeapps.list
 !.config/user-dirs.dirs
 !.config/user-dirs.locale
-!.config/polybar/
-!.config/bspwm/
-!.config/sxhkd/
-!.config/picom/
 
-# local
-.local/src/
-.local/lib/
-.local/include/
-.local/share/*
-.local/state/
+# ~/.local/
+!.local/bin/*
 !.local/share/bg.png
 

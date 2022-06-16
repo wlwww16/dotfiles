@@ -30,9 +30,9 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export NUGET_PACKAGES="${XDG_CACHE_HOME:-$HOME/.cache}/nuget"
 
 # Configs
-export PF_INFO="ascii os kernel wm shell memory uptime" # pfetch
+export PF_INFO="ascii os kernel wm shell memory uptime" # pfetch info
 export SUDO_ASKPASS="$HOME/.local/bin/dpass" # sudo askpass now takes dmenu input
-export _JAVA_AWT_WM_NONREPARENTING=1 # fix for Java applications in dwm
+export _JAVA_AWT_WM_NONREPARENTING=1 # fix for Java applications in some tiling WMs
 
 # startx if possible
 if pacman -Qs libxft-bgra >/dev/null 2>&1; then

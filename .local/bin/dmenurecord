@@ -22,7 +22,7 @@ killrecording() {
 	sleep 3
 	kill -9 "$recpid"
 	exit
-	}
+}
 
 screencast() { \
 	ffmpeg -y \
@@ -36,7 +36,7 @@ screencast() { \
 	"$HOME/screencast-$(date '+%y%m%d-%H%M-%S').mp4" &
 	echo $! > /tmp/recordingpid
 	notify-send -t 1000 "dmenurecord" "Screencast started"
-       	}
+}
 
 video() { ffmpeg \
 	-f x11grab \
@@ -46,7 +46,7 @@ video() { ffmpeg \
 	"$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
 	notify-send -t 1000 "dmenurecord" "Video recording started"
-	}
+}
 
 webcamhidef() { ffmpeg \
 	-f v4l2 \
@@ -55,7 +55,7 @@ webcamhidef() { ffmpeg \
 	"$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
 	notify-send -t 1000 "dmenurecord" "HD webcam recording started"
-	}
+}
 
 webcam() { ffmpeg \
 	-f v4l2 \
@@ -64,7 +64,7 @@ webcam() { ffmpeg \
 	"$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > /tmp/recordingpid
 	notify-send -t 1000 "dmenurecord" "Webcam recording started"
-	}
+}
 
 audio() { \
 	ffmpeg \
@@ -73,10 +73,11 @@ audio() { \
 	"$HOME/audio-$(date '+%y%m%d-%H%M-%S').flac" &
 	echo $! > /tmp/recordingpid
 	notify-send -t 1000 "dmenurecord" "Audio recording started"
-	}
+}
 
 askrecording() { \
-	choice=$(printf "screencast\\nvideo\\nvideo selected\\naudio\\nwebcam\\nwebcam (hi-def)" | dmenu -i -p "Select recording style:")
+	choice=$(/home/will/.local/bin/dprompt "screencast\\nvideo\nvideo selected\naudio\nwebcam\nwebcam (hi-def)" "Select recording option")
+
 	case "$choice" in
 		screencast) screencast;;
 		audio) audio;;
@@ -85,12 +86,12 @@ askrecording() { \
 		webcam) webcam;;
 		webcam-hd) webcamhidef;;
 	esac
-	}
+}
 
 asktoend() { \
 	response=$(printf "No\\nYes" | dmenu -i -p "Recording still active. End recording?") &&
 	[ "$response" = "Yes" ] &&  killrecording
-	}
+}
 
 videoselected()
 {
