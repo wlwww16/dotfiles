@@ -3,6 +3,8 @@
 .dbus/
 .dotnet/
 .librewolf/
+.mpd/
+.ncmpcpp/
 .pki/
 .plastic4/
 .templateengine/
