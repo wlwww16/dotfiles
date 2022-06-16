@@ -9,13 +9,16 @@ These are my personal dotfiles and configurations that work for me.
 
 ## programs
 - shell: **zsh**
-- wm: **[dwm](https://github.com/wlwww16/dwm)** or **bspwm**
+- wm: **bspwm** or **[dwm](https://github.com/wlwww16/dwm)**
 - term: **[st](https://github.com/wlwww16/st)**
-- bar: **dwm** w/ **[slstatus](https://github.com/wlwww16/slstatus)** or **polybar**
-- fm: **[lf](https://github.com/wlwww16/dotfiles/tree/master/.config/lf)**, **pcmanfm-gtk3**
-- media: **[nsxiv](https://github.com/nsxiv/nsxiv)**, **[mpv](https://mpv.io)**
+- bar: **[polybar](https://github.com/wlwww16/dotfiles/tree/master/.config/polybar)** or **[slstatus](https://github.com/wlwww16/slstatus)** inside dwm's bar
+- fm: **[lf](https://github.com/wlwww16/dotfiles/tree/master/.config/lf)**
+- compositor: **[picom](https://github.com/wlwww16/dotfiles/tree/master/.config/picom)**
+- media: **[nsxiv](https://github.com/wlwww16/dotfiles/tree/master/.config/nsxiv)**, **[mpv](https://github.com/wlwww16/dotfiles/tree/master/.config/mpv)**
 
 ## misc
-- gtk3 theme: **[gruvbox-material-dark](https://github.com/TheGreatMcPain/gruvbox-material-gtk)**
-- font: **hack**, **fontawesome6**, **joypixels**
-- colors: **gruvbox**
+- gtk theme: **Fluent-Dark**
+- icon theme: **Crule-dark**
+- cursor theme: **phinger-cursors**
+- font: **Roboto**, **JetBrainsMono Nerd Font**, **FontAwesome 6**, **JoyPixels**
+- colors: **monokai**
