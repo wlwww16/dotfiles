@@ -1,7 +1,7 @@
 # dotfiles
 These are my personal dotfiles and configurations that work for me.
 
-![](https://github.com/wlwww16/dotfiles/tree/master/screenshots/desktop-2022-16-06.png)
+![](https://raw.githubusercontent.com/wlwww16/dotfiles/master/screenshots/desktop-2022-06-17.png)
 
 ## at a glance
 - as many cache, config, and data files moved out of ~
