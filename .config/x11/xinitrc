@@ -6,5 +6,5 @@ else
 	. "$HOME/.xprofile"
 fi
 
-#exec dwm
+#exec dbus-launch dwm
 exec dbus-launch bspwm
