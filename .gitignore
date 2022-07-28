@@ -1,0 +1,64 @@
+# dot dirs
+.cache/
+.dbus/
+.dotnet/
+.icons/
+.librewolf/
+.mpd/
+.ncmpcpp/
+.pki/
+.plastic4/
+.templateengine/
+.vscode-oss/
+.java/
+.nuget/
+.wine/
+.WineApps/
+
+# personal dirs
+documents/
+downloads/
+music/
+pictures/
+videos/
+vimwiki/
+go/
+
+# dot files
+.git-credentials
+.node_repl_history
+.gtk-bookmarks
+
+# config
+.config/*
+!.config/alacritty
+!.config/dunst/
+!.config/gammastep/
+!.config/fontconfig/
+!.config/gtk-3.0/settings.ini
+!.config/htop/
+!.config/lf/
+!.config/mpv/
+!.config/networkmanager-dmenu/
+!.config/neofetch/
+!.config/npm/
+!.config/nvim/
+!.config/pcmanfm/
+!.config/shell/
+!.config/sway/
+!.config/waybar/
+!.config/wofi/
+!.config/nsxiv/
+!.config/wget/
+!.config/zsh/.zshrc
+!.config/zsh/.zprofile
+!.config/mimeapps.list
+!.config/user-dirs.dirs
+!.config/user-dirs.locale
+
+# local
+.local/src/
+.local/lib/
+.local/include/
+.local/share/
+.local/state/

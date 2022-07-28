@@ -1,0 +1,35 @@
+# alias file. This defines the aliases to be used by the shell.
+
+# Remove the need for sudo on certain commands
+for command in mount umount sv pacman shutdown zzz ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Verbosity and common switches
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt x -f bestaudio/best" \
+
+# Colourise commands
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+
+# Abbreviations
+alias \
+	la="ls -a" \
+	ll="ls -alF" \
+	ga="git add" \
+	gs="git status" \
+	gd="git diff" \
+	gcm="git commit -m" \
+	gpom="git push origin master" \
+	vim="nvim" \
+	ns="nsxiv" \
+
+

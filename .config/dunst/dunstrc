@@ -1,0 +1,31 @@
+[global]
+	width = 370
+	height = 350
+	offset = 20x50
+	padding = 8
+	horizontal_padding = 8
+	frame_width = 3
+	font = Roboto 14
+	transparency = 10
+
+[urgency_low]
+	background = "#272822"
+	foreground = "#ae622e"
+	timeout = 2
+	format = "<b><span foreground='#a6e22e'>%s</span></b>\n%b"
+	frame_color = "#a6e22e"
+
+[urgency_normal]
+	background = "#272822"
+	foreground = "#66d9ef"
+	timeout = 4
+	format = "<b><span foreground='#66d9ef'>%s</span></b>\n%b"
+	frame_color = "#66d9ef"
+
+[urgency_critical]
+	background = "#272822"
+	foreground = "#f92672"
+	timeout = 8
+	format = "<b><span foreground='#f92672'>%s</span></b>\n%b"
+	frame_color = "#f92672"
+
